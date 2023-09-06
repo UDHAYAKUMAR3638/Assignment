@@ -1,3 +1,4 @@
+//Nested interface
 interface Nested1{
     interface InsideNested{
       void display();
@@ -16,3 +17,28 @@ public class Nested {
     }
     
 }
+
+//class inside interface
+
+interface Nested1{
+        class A
+        {
+        void m1(){
+        System.out.println("inside m1");
+        }
+        void m2(){
+        System.out.println("inside m2");
+        }
+        }
+}
+
+public class nestclass{
+public static void main(String args[])
+{
+Nested1.A ia = new Nested1.A();
+ia.m1();
+ia.m2();
+}
+}
+
+//interface inside class
