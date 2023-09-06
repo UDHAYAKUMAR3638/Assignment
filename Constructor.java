@@ -15,7 +15,7 @@ public class Constructor {
        this.b=obj.b;
     }
     void display()
-    {
+    {   this();
         System.out.println("Area is:"+this.l*this.b);
     }
     
