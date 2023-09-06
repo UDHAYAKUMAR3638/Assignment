@@ -52,7 +52,7 @@ ia.m2();
        System.out.println("interface implemented");
     }
     public static void main(String args[]) {
-       interfaceclass obj = new interfaceclass();
+       Test.myInterface obj = new interfaceclass();
        obj.demo();
     }
  }
