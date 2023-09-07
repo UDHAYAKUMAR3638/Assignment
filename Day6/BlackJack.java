@@ -1,3 +1,4 @@
+
 import java.util.HashMap;
 import java.util.*;
 
@@ -21,13 +22,13 @@ public class BlackJack {
 
     }};
     public static void main(String[] args) {
-    System.out.println("Welcome to BlackJack Program");
+    System.out.println("\nWelcome to BlackJack Program");
      int i1=ranGen();
      int i2=ranGen();
      System.out.println("You get a "+i1+" and a "+i2);
      player+=i1+i2;
      dealer+=ranGen();
-     System.out.println("The dealer has a "+dealer+" showing , and a hidden card.\nHis total is hidden, too.");
+     System.out.println("The dealer has a "+dealer+" showing, and a hidden card.\nHis total is hidden, too.");
       choose();
 }
 static int ranGen()
@@ -50,7 +51,7 @@ static void choose()
 {   
     if(curr){
     Scanner s=new Scanner(System.in);
-    System.out.println("Would you like to \"hit\" or \"stay\"?");
+    System.out.println("\nWould you like to \"hit\" or \"stay\"?");
     str=s.nextLine();
     }
     else{
@@ -77,7 +78,7 @@ static void choose()
          choose();
         }
         else
-        {   System.out.println("Dealer stays");
+        {   System.out.println("\nDealer stays.");
             curr=true;
             comp();
             choose();
@@ -87,7 +88,7 @@ static void choose()
    
 static void playhit()
 {  int val=ranGen();
-   System.out.println("You drew a "+val);
+   System.out.println("\nYou drew a "+val+".");
    player+=val;
    playert();
    comp();
@@ -95,7 +96,7 @@ static void playhit()
 }
 static void dealerhit()
 {  int val=ranGen();
-  System.out.println("He drews a "+val);
+  System.out.println("\nHe drews a "+val+".");
  dealer+=val;
   dealert();
   comp();
@@ -103,8 +104,8 @@ static void dealerhit()
 }
 static void stay()
 { int val=ranGen();
-  System.out.println("Okay dealer's turn ");
-  System.out.println("His hidden card was a "+val);
+  System.out.println("\nOkay dealer's turn. ");
+  System.out.println("His hidden card was a "+val+".");
   dealer+=val;
   dealert();
   stayval=false;
@@ -113,21 +114,28 @@ static void stay()
 }
 
 static void playert()
-{ System.out.println("Your total is "+player);
+{ System.out.println("Your total is "+player+".");
 }
 static void dealert()
-{ System.out.println("His total is "+dealer);
+{ System.out.println("His total was "+dealer+".");
 }
 static void comp()
 {
     if(player>21)
-   { System.out.println("DEALER WIN!");
+   {Score();
+    System.out.println("\nDEALER WIN!");
     System.exit(0);
    }
     else if(dealer>16)
-    {System.out.println("YOU WIN!");
+    {Score();
+    System.out.println("\nYOU WIN!");
     System.exit(0);
      }
+}
+static void Score()
+{
+   System.out.println("\nYour total is:"+player+"."); 
+   System.out.println("Dealer total is:"+dealer+"."); 
 }
 
 }
