@@ -1,8 +1,17 @@
 
 import java.util.HashMap;
 import java.util.*;
-
-public class BlackJack {
+interface card {
+     int ranGen();
+     void choose();
+     void playhit();
+     void dealerhit();
+     void stay();
+     void playert();
+     void comp();
+     void Score();
+}
+public class BlackJack1 implements card {
      static int player=0;
      static int dealer=0;
      static boolean curr=true;
@@ -22,16 +31,17 @@ public class BlackJack {
 
     }};
     public static void main(String[] args) {
+        card c=new BlackJack1();
     System.out.println("\nWelcome to BlackJack Program");
-     int i1=ranGen();
-     int i2=ranGen();
+     int i1=c.ranGen();
+     int i2=c.ranGen();
      System.out.println("You get a "+i1+" and a "+i2);
      player+=i1+i2;
-     dealer+=ranGen();
+     dealer+=c.ranGen();
      System.out.println("The dealer has a "+dealer+" showing, and a hidden card.\nHis total is hidden, too.");
-      choose();
+      c.choose();
 }
-static int ranGen()
+public int ranGen()
 {
      int val=(int)Math.floor((Math.random()*(11-2+1)+2));
      if(map.get(val)>0)
@@ -47,7 +57,7 @@ static int ranGen()
      }
    return val;
 }
-static void choose()
+public void choose()
 {   
     if(curr){
     Scanner s=new Scanner(System.in);
@@ -86,7 +96,7 @@ static void choose()
     }
 }
    
-static void playhit()
+public void playhit()
 {  int val=ranGen();
    System.out.println("\nYou drew a "+val+".");
    player+=val;
@@ -94,7 +104,7 @@ static void playhit()
    comp();
    choose();
 }
-static void dealerhit()
+public void dealerhit()
 {  int val=ranGen();
   System.out.println("\nHe drews a "+val+".");
  dealer+=val;
@@ -102,7 +112,7 @@ static void dealerhit()
   comp();
   choose();
 }
-static void stay()
+public void stay()
 { int val=ranGen();
   System.out.println("\nOkay dealer's turn. ");
   System.out.println("His hidden card was a "+val+".");
@@ -113,13 +123,13 @@ static void stay()
   choose();
 }
 
-static void playert()
+public void playert()
 { System.out.println("Your total is "+player+".");
 }
-static void dealert()
+public void dealert()
 { System.out.println("His total was "+dealer+".");
 }
-static void comp()
+public void comp()
 {
     if(player>21)
    {Score();
@@ -132,7 +142,7 @@ static void comp()
     System.exit(0);
      }
 }
-static void Score()
+public void Score()
 {
    System.out.println("\nYour total is:"+player+"."); 
    System.out.println("Dealer total is:"+dealer+"."); 
