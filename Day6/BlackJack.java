@@ -11,7 +11,7 @@ interface card {
      void comp();
      void Score();
 }
-public class BlackJack1 implements card {
+public class BlackJack implements card {
      static int player=0;
      static int dealer=0;
      static boolean curr=true;
