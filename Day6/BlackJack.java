@@ -11,7 +11,7 @@ interface card {
      void comp();
      void Score();
 }
-public class BlackJack implements card {
+public class BlackJack1 implements card {
      static int player=0;
      static int dealer=0;
      static boolean curr=true;
@@ -41,6 +41,10 @@ public class BlackJack implements card {
      System.out.println("The dealer has a "+dealer+" showing, and a hidden card.\nHis total is hidden, too.");
       c.choose();
 }
+
+/*ranGen method generates random value ranges from 2 to 11 and 
+generated value can't be used more than 4 times if it's used. Then 
+it will generate another random value from  given range.*/
 public int ranGen()
 {
      int val=(int)Math.floor((Math.random()*(11-2+1)+2));
@@ -57,6 +61,10 @@ public int ranGen()
      }
    return val;
 }
+
+/*choose method will get input as a string from user if it is player.
+if it is dealer it will generate random choice either "hit" or "stay" 
+and then call it's respective functions */
 public void choose()
 {   
     if(curr){
@@ -95,7 +103,9 @@ public void choose()
         }
     }
 }
-   
+
+/*it generate random value and add it to player's total.
+check for ending condition then again call choose method*/
 public void playhit()
 {  int val=ranGen();
    System.out.println("\nYou drew a "+val+".");
@@ -104,6 +114,9 @@ public void playhit()
    comp();
    choose();
 }
+
+/*it generate random value and add it to dealer's total.
+check for ending condition then again call choose method*/
 public void dealerhit()
 {  int val=ranGen();
   System.out.println("\nHe drews a "+val+".");
@@ -112,6 +125,9 @@ public void dealerhit()
   comp();
   choose();
 }
+
+/*it generate random value and add it to dealer's total 
+then check for ending condition and call choose method */
 public void stay()
 { int val=ranGen();
   System.out.println("\nOkay dealer's turn. ");
@@ -123,12 +139,18 @@ public void stay()
   choose();
 }
 
+//display's player total.
 public void playert()
 { System.out.println("Your total is "+player+".");
 }
+
+//display's dealer's total.
 public void dealert()
 { System.out.println("His total was "+dealer+".");
 }
+
+/*it checks for the ending condition that is whether
+ player total or dealer total exceeded the limit*/
 public void comp()
 {
     if(player>21)
@@ -142,6 +164,8 @@ public void comp()
     System.exit(0);
      }
 }
+
+//displays the total of player and dealer.
 public void Score()
 {
    System.out.println("\nYour total is:"+player+"."); 
