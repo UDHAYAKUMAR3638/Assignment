@@ -11,12 +11,13 @@ interface card {
      void comp();
      void Score();
 }
-public class BlackJack1 implements card {
+public class BlackJack implements card {
      static int player=0;
      static int dealer=0;
      static boolean curr=true;
      static String str;
      static boolean stayval=true;
+     static int target;
      static HashMap<Integer, Integer>map=new HashMap<>(){{
         put(2,4);
         put(3,4);
@@ -38,8 +39,12 @@ public class BlackJack1 implements card {
      System.out.println("You get a "+i1+" and a "+i2);
      player+=i1+i2;
      dealer+=c.ranGen();
+     Scanner s=new Scanner(System.in);
      System.out.println("The dealer has a "+dealer+" showing, and a hidden card.\nHis total is hidden, too.");
-      c.choose();
+     System.out.println("Set the Target Value:");
+     target=s.nextInt(); 
+     c.choose();
+     
 }
 
 /*ranGen method generates random value ranges from 2 to 11 and 
@@ -153,12 +158,12 @@ public void dealert()
  player total or dealer total exceeded the limit*/
 public void comp()
 {
-    if(player>21)
+    if(player>target)
    {Score();
     System.out.println("\nDEALER WIN!");
     System.exit(0);
    }
-    else if(dealer>16)
+    else if(dealer>target)
     {Score();
     System.out.println("\nYOU WIN!");
     System.exit(0);
