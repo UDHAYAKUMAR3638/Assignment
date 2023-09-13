@@ -123,6 +123,71 @@ public class DoublyLinkedList {
             }
         }
     }
+    static void replaceElementbyPos(DoublyLinkedList list,int pos1,int pos2)
+    {
+        Node firstnode=list.head;
+        Node secondnode=list.head;
+        while(firstnode!=null&&firstnode.data!=pos1)
+        {
+            firstnode=firstnode.next;
+        }
+        while(secondnode!=null&&secondnode.data!=pos2)
+        {
+            secondnode=secondnode.next;
+        }
+            Node temp = new Node(firstnode.data);
+            temp.next = firstnode.next;
+            temp.prev = firstnode.prev;
+            firstnode.next = secondnode.next;
+            firstnode.prev = secondnode.prev;
+            secondnode.next = temp.next;
+            secondnode.prev = temp.prev;
+            if(firstnode.next!=null)
+            firstnode.next.prev = firstnode;
+            if(firstnode.prev!=null)
+            firstnode.prev.next = firstnode;
+            if(secondnode.prev!=null)
+            secondnode.prev.next = secondnode;
+            if(secondnode.next!=null)
+            secondnode.next.prev = secondnode;
+        if(pos1==list.head.data)
+            list.head=secondnode;
+    }
+    static void replaceElement(DoublyLinkedList list,int val1,int val2)
+    {
+        Node firstnode=list.head;
+        Node secondnode=list.head;
+        int cnt=1;
+        while(firstnode!=null&&cnt!=val1)
+        {
+            firstnode=firstnode.next;
+            cnt++;
+        }
+        cnt=1;
+        while(secondnode!=null&&cnt!=val2)
+        {
+            secondnode=secondnode.next;
+            cnt++;
+        }
+        Node temp = new Node(firstnode.data);
+        temp.next = firstnode.next;
+        temp.prev = firstnode.prev;
+
+        firstnode.next = secondnode.next;
+        firstnode.prev = secondnode.prev;
+        secondnode.next = temp.next;
+        secondnode.prev = temp.prev;
+        if(firstnode.next!=null)
+            firstnode.next.prev = firstnode;
+        if(firstnode.prev!=null)
+            firstnode.prev.next = firstnode;
+        if(secondnode.prev!=null)
+            secondnode.prev.next = secondnode;
+        if(secondnode.next!=null)
+            secondnode.next.prev = secondnode;
+        if(val1==1)
+            list.head=secondnode;
+    }
 
     public static void main(String args[]) {
         DoublyLinkedList list = new DoublyLinkedList();
@@ -135,7 +200,9 @@ public class DoublyLinkedList {
             System.out.println("3. REMOVE A ELEMENT");
             System.out.println("4. REVERSE LIST");
             System.out.println("5. INSERT A ELEMENT AT END");
-            System.out.println("6. EXIT");
+            System.out.println("6. TO REPLACE TWO NODES USING POSITION");
+            System.out.println("7. TO REPLACE TWO NODES USING ELEMENTS");
+            System.out.println("8. EXIT");
             Integer opt = sc.nextInt();
             switch (opt) {
                 case 1:
@@ -157,6 +224,14 @@ public class DoublyLinkedList {
                     insertAtEnd(sc.nextInt());
                     break;
                 case 6:
+                    System.out.println("Enter the positions to replaced");
+                    replaceElementbyPos(list,sc.nextInt(),sc.nextInt());
+                    break;
+                case 7:
+                    System.out.println("Enter the Elements to replaced");
+                    replaceElementbyPos(list,sc.nextInt(),sc.nextInt());
+                    break;
+                case 8:
                     flag = 0;
                     break;
             }
