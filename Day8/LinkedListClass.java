@@ -84,14 +84,28 @@ public class LinkedListClass {
 
 
        }
-       public static void replaceList(LinkedListClass list,int ele,int rep)
-       {   Node curr=list.head;
-           while(curr!=null&&curr.data!=ele)
-           {
-               curr=curr.next;
+       public static void replaceList(LinkedListClass list,int val1,int val2)
+       {   Node curr1=list.head;
+           Node prev1=null;
+           while(curr1!=null&&curr1.data!=val1)
+           {   prev1=curr1;
+               curr1=curr1.next;
            }
-           if(curr.data==ele)
-               curr.data=rep;
+           Node curr2=list.head;
+           Node prev2=null;
+           while(curr2!=null&&curr2.data!=val2)
+           {   prev2=curr2;
+               curr2=curr2.next;
+           }
+           if(prev1!=null)
+           prev1.next=curr2;
+           prev2.next=curr1;
+           Node temp=new Node(curr1.data);
+           temp.next=curr1.next;
+           curr1.next=curr2.next;
+           curr2.next=temp.next;
+           if(list.head.data==val1)
+               list.head=curr2;
        }
        public static void reverseList(LinkedListClass list)
        {
@@ -123,7 +137,8 @@ public class LinkedListClass {
                 System.out.println("4. REVERSE LIST");
                 System.out.println("5. FIND A ELEMENT");
                 System.out.println("6. TO INSERT ELEMENT");
-                System.out.println("7. EXIT");
+                System.out.println("7. TO REPLACE TWO ELEMENTS");
+                System.out.println("8. EXIT");
                 Integer opt = sc.nextInt();
                 switch (opt) {
                     case 1:
@@ -145,8 +160,10 @@ public class LinkedListClass {
                         System.out.println(findList(list, sc.nextInt()));
                         break;
                     case 6:System.out.println("Enter Position and element to be inserted:");
-                    insertList(list,sc.nextInt(),sc.nextInt());break;
-                    case 7:
+                     insertList(list,sc.nextInt(),sc.nextInt());break;
+                    case 7:System.out.println("Enter the elements to be replaced:");
+                        replaceList(list,sc.nextInt(),sc.nextInt());break;
+                    case 8:
                         flag = 0;
                         break;
                 }
