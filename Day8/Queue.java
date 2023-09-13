@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Queue {
-    int SIZE = 5;
+    int SIZE = 20;
     int items[] = new int[SIZE];
     int front, rear;
     Queue() {
