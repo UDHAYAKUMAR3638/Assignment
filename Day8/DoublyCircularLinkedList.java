@@ -89,13 +89,9 @@ class Node2{
                 cur=cur.prev;
             }
             cur.next=cur.prev;
-            cur.prev=null;
             tail=temp;
             head=cur;
-
-
         }
-
         void find(Integer val){
             Node2 node=head;
             Integer index=0;
