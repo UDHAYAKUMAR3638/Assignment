@@ -120,7 +120,7 @@ class Node2{
     }
 
 
-    public class DoublyCircularLinkedList{
+    public class CircularDoublyLinkedList{
         public static void main(String[] args) {
 
             Scanner sc=new Scanner(System.in);
