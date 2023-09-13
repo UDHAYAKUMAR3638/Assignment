@@ -89,6 +89,7 @@ class Node2{
                 cur=cur.prev;
             }
             cur.next=cur.prev;
+            cur.prev=temp;
             tail=temp;
             head=cur;
         }
