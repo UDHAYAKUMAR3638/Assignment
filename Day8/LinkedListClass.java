@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class LinkedListClass {
     Node head;
     static class Node {
@@ -21,15 +23,16 @@ public class LinkedListClass {
            }
           //return list;
         }
-        public static void printlist(LinkedListClass list)
+        public static void printList(LinkedListClass list)
         {      Node node=list.head;
             while(node!=null)
             {
                 System.out.print(node.data+" ");
                 node=node.next;
             }
+            System.out.println();
         }
-       public static int findlist(LinkedListClass list,int ele)
+       public static int findList(LinkedListClass list,int ele)
        {
            Node curr=list.head;
            int cnt=1;
@@ -40,7 +43,7 @@ public class LinkedListClass {
                return cnt;
            return -1;
        }
-       public static void deletelist(LinkedListClass list,int ele)
+       public static void deleteList(LinkedListClass list,int ele)
        {
           Node currNode=list.head,prev=null;
           if(currNode!=null && currNode.data==ele)
@@ -56,7 +59,7 @@ public class LinkedListClass {
                   prev.next=currNode.next;
           }
        }
-       public static void insertlist(LinkedListClass list,int pos,int ele)
+       public static void insertList(LinkedListClass list,int pos,int ele)
        {
            Node curr=list.head,prev=null;
            int cnt=1;
@@ -81,7 +84,7 @@ public class LinkedListClass {
 
 
        }
-       public static void replacelist(LinkedListClass list,int ele,int rep)
+       public static void replaceList(LinkedListClass list,int ele,int rep)
        {   Node curr=list.head;
            while(curr!=null&&curr.data!=ele)
            {
@@ -90,7 +93,7 @@ public class LinkedListClass {
            if(curr.data==ele)
                curr.data=rep;
        }
-       public static void reverselist(LinkedListClass list)
+       public static void reverseList(LinkedListClass list)
        {
            Node prev=null,curr=list.head;
            Node Next;
@@ -109,23 +112,47 @@ public class LinkedListClass {
        }
         public static void main(String args [])
         {
-            LinkedListClass list=new LinkedListClass();
-            add(list,1);
-            add(list,2);
-            add(list,4);
-            add(list,5);
-            add(list,6);
-            add(list,7);
-            printlist(list);
-            System.out.println();
-//            deletelist(list,5);
-//            printlist(list);
-//            System.out.println();
-//            System.out.println(findlist(list,5));
-//            replacelist(list,4,10);
-//             insertlist(list,7,3);
-            reverselist(list);
-             printlist(list);
+            LinkedListClass list = new LinkedListClass();
+            Scanner sc = new Scanner(System.in);
+            Integer flag = 1;
+            while (flag == 1) {
+                System.out.println("Enter the number of the below option to do list operation");
+                System.out.println("1. ADD A ELEMENT");
+                System.out.println("2. VIEW LIST");
+                System.out.println("3. REMOVE A ELEMENT");
+                System.out.println("4. REVERSE LIST");
+                System.out.println("5. FIND A ELEMENT");
+                System.out.println("6. TO INSERT ELEMENT");
+                System.out.println("7. EXIT");
+                Integer opt = sc.nextInt();
+                switch (opt) {
+                    case 1:
+                        System.out.println("Enter the value to add");
+                        add(list, sc.nextInt());
+                        break;
+                    case 2:
+                        printList(list);
+                        break;
+                    case 3:
+                        System.out.println("Enter the value to remove");
+                        deleteList(list, sc.nextInt());
+                        break;
+                    case 4:
+                        reverseList(list);
+                        break;
+                    case 5:
+                        System.out.println("Enter the value to be searched");
+                        System.out.println(findList(list, sc.nextInt()));
+                        break;
+                    case 6:System.out.println("Enter Position and element to be inserted:");
+                    insertList(list,sc.nextInt(),sc.nextInt());break;
+                    case 7:
+                        flag = 0;
+                        break;
+                }
+
+            }
+
 
         }
 }
