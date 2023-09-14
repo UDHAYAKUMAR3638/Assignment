@@ -127,44 +127,14 @@ public class DoublyLinkedList {
     {
         Node firstnode=list.head;
         Node secondnode=list.head;
-        while(firstnode!=null&&firstnode.data!=pos1)
-        {
-            firstnode=firstnode.next;
-        }
-        while(secondnode!=null&&secondnode.data!=pos2)
-        {
-            secondnode=secondnode.next;
-        }
-            Node temp = new Node(firstnode.data);
-            temp.next = firstnode.next;
-            temp.prev = firstnode.prev;
-            firstnode.next = secondnode.next;
-            firstnode.prev = secondnode.prev;
-            secondnode.next = temp.next;
-            secondnode.prev = temp.prev;
-            if(firstnode.next!=null)
-            firstnode.next.prev = firstnode;
-            if(firstnode.prev!=null)
-            firstnode.prev.next = firstnode;
-            if(secondnode.prev!=null)
-            secondnode.prev.next = secondnode;
-            if(secondnode.next!=null)
-            secondnode.next.prev = secondnode;
-        if(pos1==list.head.data)
-            list.head=secondnode;
-    }
-    static void replaceElement(DoublyLinkedList list,int val1,int val2)
-    {
-        Node firstnode=list.head;
-        Node secondnode=list.head;
         int cnt=1;
-        while(firstnode!=null&&cnt!=val1)
+        while(firstnode!=null&&cnt!=pos1)
         {
             firstnode=firstnode.next;
             cnt++;
         }
         cnt=1;
-        while(secondnode!=null&&cnt!=val2)
+        while(secondnode!=null&&cnt!=pos2)
         {
             secondnode=secondnode.next;
             cnt++;
@@ -184,7 +154,37 @@ public class DoublyLinkedList {
             secondnode.prev.next = secondnode;
         if(secondnode.next!=null)
             secondnode.next.prev = secondnode;
-        if(val1==1)
+        if(pos1==1)
+            list.head=secondnode;
+    }
+    static void replaceElement(DoublyLinkedList list,int val1,int val2)
+    {
+        Node firstnode=list.head;
+        Node secondnode=list.head;
+        while(firstnode!=null&&firstnode.data!=val1)
+        {
+            firstnode=firstnode.next;
+        }
+        while(secondnode!=null&&secondnode.data!=val2)
+        {
+            secondnode=secondnode.next;
+        }
+        Node temp = new Node(firstnode.data);
+        temp.next = firstnode.next;
+        temp.prev = firstnode.prev;
+        firstnode.next = secondnode.next;
+        firstnode.prev = secondnode.prev;
+        secondnode.next = temp.next;
+        secondnode.prev = temp.prev;
+        if(firstnode.next!=null)
+            firstnode.next.prev = firstnode;
+        if(firstnode.prev!=null)
+            firstnode.prev.next = firstnode;
+        if(secondnode.prev!=null)
+            secondnode.prev.next = secondnode;
+        if(secondnode.next!=null)
+            secondnode.next.prev = secondnode;
+        if(val1==list.head.data)
             list.head=secondnode;
     }
 
