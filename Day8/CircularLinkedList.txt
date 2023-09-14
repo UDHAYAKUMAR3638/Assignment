@@ -1,0 +1,158 @@
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW LIST
+3. REMOVE A ELEMENT
+4. REVERSE LIST
+5. FIND A ELEMENT
+6. REPLACE TWO ELEMENTS
+7. EXIT
+1
+Enter the value to add
+11
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW LIST
+3. REMOVE A ELEMENT
+4. REVERSE LIST
+5. FIND A ELEMENT
+6. REPLACE TWO ELEMENTS
+7. EXIT
+1
+Enter the value to add
+22
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW LIST
+3. REMOVE A ELEMENT
+4. REVERSE LIST
+5. FIND A ELEMENT
+6. REPLACE TWO ELEMENTS
+7. EXIT
+1
+Enter the value to add
+33
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW LIST
+3. REMOVE A ELEMENT
+4. REVERSE LIST
+5. FIND A ELEMENT
+6. REPLACE TWO ELEMENTS
+7. EXIT
+1
+Enter the value to add
+44
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW LIST
+3. REMOVE A ELEMENT
+4. REVERSE LIST
+5. FIND A ELEMENT
+6. REPLACE TWO ELEMENTS
+7. EXIT
+1
+Enter the value to add
+55
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW LIST
+3. REMOVE A ELEMENT
+4. REVERSE LIST
+5. FIND A ELEMENT
+6. REPLACE TWO ELEMENTS
+7. EXIT
+1
+Enter the value to add
+66
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW LIST
+3. REMOVE A ELEMENT
+4. REVERSE LIST
+5. FIND A ELEMENT
+6. REPLACE TWO ELEMENTS
+7. EXIT
+2
+11 22 33 44 55 66
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW LIST
+3. REMOVE A ELEMENT
+4. REVERSE LIST
+5. FIND A ELEMENT
+6. REPLACE TWO ELEMENTS
+7. EXIT
+3
+Enter the value to remove
+11
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW LIST
+3. REMOVE A ELEMENT
+4. REVERSE LIST
+5. FIND A ELEMENT
+6. REPLACE TWO ELEMENTS
+7. EXIT
+2
+22 33 44 55 66
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW LIST
+3. REMOVE A ELEMENT
+4. REVERSE LIST
+5. FIND A ELEMENT
+6. REPLACE TWO ELEMENTS
+7. EXIT
+4
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW LIST
+3. REMOVE A ELEMENT
+4. REVERSE LIST
+5. FIND A ELEMENT
+6. REPLACE TWO ELEMENTS
+7. EXIT
+2
+66 55 44 33 22
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW LIST
+3. REMOVE A ELEMENT
+4. REVERSE LIST
+5. FIND A ELEMENT
+6. REPLACE TWO ELEMENTS
+7. EXIT
+5
+Enter the value to be searched
+55
+2
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW LIST
+3. REMOVE A ELEMENT
+4. REVERSE LIST
+5. FIND A ELEMENT
+6. REPLACE TWO ELEMENTS
+7. EXIT
+6
+Enter the values to replaced
+55
+22
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW LIST
+3. REMOVE A ELEMENT
+4. REVERSE LIST
+5. FIND A ELEMENT
+6. REPLACE TWO ELEMENTS
+7. EXIT
+2
+66 22 44 33 55
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW LIST
+3. REMOVE A ELEMENT
+4. REVERSE LIST
+5. FIND A ELEMENT
+6. REPLACE TWO ELEMENTS
+7. EXIT
