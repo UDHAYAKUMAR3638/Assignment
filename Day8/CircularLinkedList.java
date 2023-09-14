@@ -88,7 +88,34 @@ public class CircularLinkedList {
         }
         return cnt;
     }
-
+    static void replaceElement(CircularLinkedList list,int val1,int val2)
+    {
+       Node firstnode=list.head;
+       Node secondnode=list.head;
+       Node prev1=null;
+       Node prev2=null;
+        while(firstnode.next!=list.head&&firstnode.data!=val1)
+        {   prev1=firstnode;
+            firstnode=firstnode.next;
+        }
+        while(secondnode.next!=list.head&&secondnode.data!=val2)
+        {    prev2=secondnode;
+            secondnode=secondnode.next;
+        }
+        if(firstnode.data==val1&&secondnode.data==val2) {
+            Node temp = new Node(1);
+            temp.next = firstnode.next;
+            if (prev1 != null)
+                prev1.next = secondnode;
+            else
+                list.tail.next=secondnode;
+            prev2.next = firstnode;
+            firstnode.next = secondnode.next;
+            secondnode.next = temp.next;
+            if (list.head.data == val1)
+                list.head = secondnode;
+        }
+    }
     public static void reverseList(CircularLinkedList list) {
         Node prev = list.tail, curr, next, temp = list.head;
         curr = list.head;
@@ -104,6 +131,7 @@ public class CircularLinkedList {
         list.head = curr;
     }
 
+
     public static void main(String args[]) {
         CircularLinkedList list = new CircularLinkedList();
         Scanner sc = new Scanner(System.in);
@@ -115,7 +143,8 @@ public class CircularLinkedList {
             System.out.println("3. REMOVE A ELEMENT");
             System.out.println("4. REVERSE LIST");
             System.out.println("5. FIND A ELEMENT");
-            System.out.println("6. EXIT");
+            System.out.println("6. REPLACE TWO ELEMENTS");
+            System.out.println("7. EXIT");
             Integer opt = sc.nextInt();
             switch (opt) {
                 case 1:
@@ -137,6 +166,10 @@ public class CircularLinkedList {
                     System.out.println(findList(list, sc.nextInt()));
                     break;
                 case 6:
+                    System.out.println("Enter the values to replaced");
+                    replaceElement(list, sc.nextInt(),sc.nextInt());
+                    break;
+                case 7:
                     flag = 0;
                     break;
             }
