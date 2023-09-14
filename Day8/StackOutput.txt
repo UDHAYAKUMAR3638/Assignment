@@ -1,0 +1,118 @@
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW LIST
+3. REMOVE TOP ELEMENT
+4. TOP ELEMENT IN THE STACK
+5. CHECK STACK IS EMPTY OR NOT
+6. EXIT
+1
+Enter the value to add
+1
+1 is pushed
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW LIST
+3. REMOVE TOP ELEMENT
+4. TOP ELEMENT IN THE STACK
+5. CHECK STACK IS EMPTY OR NOT
+6. EXIT
+1
+Enter the value to add
+2
+2 is pushed
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW LIST
+3. REMOVE TOP ELEMENT
+4. TOP ELEMENT IN THE STACK
+5. CHECK STACK IS EMPTY OR NOT
+6. EXIT
+1
+Enter the value to add
+3
+3 is pushed
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW LIST
+3. REMOVE TOP ELEMENT
+4. TOP ELEMENT IN THE STACK
+5. CHECK STACK IS EMPTY OR NOT
+6. EXIT
+1
+Enter the value to add
+4
+4 is pushed
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW LIST
+3. REMOVE TOP ELEMENT
+4. TOP ELEMENT IN THE STACK
+5. CHECK STACK IS EMPTY OR NOT
+6. EXIT
+1
+Enter the value to add
+5
+5 is pushed
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW LIST
+3. REMOVE TOP ELEMENT
+4. TOP ELEMENT IN THE STACK
+5. CHECK STACK IS EMPTY OR NOT
+6. EXIT
+1
+Enter the value to add
+6
+6 is pushed
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW LIST
+3. REMOVE TOP ELEMENT
+4. TOP ELEMENT IN THE STACK
+5. CHECK STACK IS EMPTY OR NOT
+6. EXIT
+2
+6 5 4 3 2 1 
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW LIST
+3. REMOVE TOP ELEMENT
+4. TOP ELEMENT IN THE STACK
+5. CHECK STACK IS EMPTY OR NOT
+6. EXIT
+3
+6
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW LIST
+3. REMOVE TOP ELEMENT
+4. TOP ELEMENT IN THE STACK
+5. CHECK STACK IS EMPTY OR NOT
+6. EXIT
+2
+5 4 3 2 1 
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW LIST
+3. REMOVE TOP ELEMENT
+4. TOP ELEMENT IN THE STACK
+5. CHECK STACK IS EMPTY OR NOT
+6. EXIT
+4
+5
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW LIST
+3. REMOVE TOP ELEMENT
+4. TOP ELEMENT IN THE STACK
+5. CHECK STACK IS EMPTY OR NOT
+6. EXIT
+5
+false
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW LIST
+3. REMOVE TOP ELEMENT
+4. TOP ELEMENT IN THE STACK
+5. CHECK STACK IS EMPTY OR NOT
+6. EXIT
