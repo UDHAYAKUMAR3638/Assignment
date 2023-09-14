@@ -1,0 +1,205 @@
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW QUEUE ELEMENTS
+3. REMOVE A ELEMENT
+4. ISEMPTY
+5. ISFULL
+6. EXIT
+1
+Enter the value to add
+1
+
+The element 1 is inserted
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW QUEUE ELEMENTS
+3. REMOVE A ELEMENT
+4. ISEMPTY
+5. ISFULL
+6. EXIT
+1
+Enter the value to add
+2
+
+The element 2 is inserted
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW QUEUE ELEMENTS
+3. REMOVE A ELEMENT
+4. ISEMPTY
+5. ISFULL
+6. EXIT
+1
+Enter the value to add
+3
+
+The element 3 is inserted
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW QUEUE ELEMENTS
+3. REMOVE A ELEMENT
+4. ISEMPTY
+5. ISFULL
+6. EXIT
+1
+Enter the value to add
+4
+
+The element 4 is inserted
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW QUEUE ELEMENTS
+3. REMOVE A ELEMENT
+4. ISEMPTY
+5. ISFULL
+6. EXIT
+1
+Enter the value to add
+5
+
+The element 5 is inserted
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW QUEUE ELEMENTS
+3. REMOVE A ELEMENT
+4. ISEMPTY
+5. ISFULL
+6. EXIT
+1
+Enter the value to add
+6
+
+The element 6 is inserted
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW QUEUE ELEMENTS
+3. REMOVE A ELEMENT
+4. ISEMPTY
+5. ISFULL
+6. EXIT
+2
+
+The elements of the queue are: 
+1 2 3 4 5 6 
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW QUEUE ELEMENTS
+3. REMOVE A ELEMENT
+4. ISEMPTY
+5. ISFULL
+6. EXIT
+3
+
+The element 1 is deleted
+Removed ELement: 1
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW QUEUE ELEMENTS
+3. REMOVE A ELEMENT
+4. ISEMPTY
+5. ISFULL
+6. EXIT
+2
+
+The elements of the queue are: 
+2 3 4 5 6 
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW QUEUE ELEMENTS
+3. REMOVE A ELEMENT
+4. ISEMPTY
+5. ISFULL
+6. EXIT
+4
+false
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW QUEUE ELEMENTS
+3. REMOVE A ELEMENT
+4. ISEMPTY
+5. ISFULL
+6. EXIT
+5
+false
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW QUEUE ELEMENTS
+3. REMOVE A ELEMENT
+4. ISEMPTY
+5. ISFULL
+6. EXIT
+3
+
+The element 2 is deleted
+Removed ELement: 2
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW QUEUE ELEMENTS
+3. REMOVE A ELEMENT
+4. ISEMPTY
+5. ISFULL
+6. EXIT
+3
+
+The element 3 is deleted
+Removed ELement: 3
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW QUEUE ELEMENTS
+3. REMOVE A ELEMENT
+4. ISEMPTY
+5. ISFULL
+6. EXIT
+3
+
+The element 4 is deleted
+Removed ELement: 4
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW QUEUE ELEMENTS
+3. REMOVE A ELEMENT
+4. ISEMPTY
+5. ISFULL
+6. EXIT
+3
+
+The element 5 is deleted
+Removed ELement: 5
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW QUEUE ELEMENTS
+3. REMOVE A ELEMENT
+4. ISEMPTY
+5. ISFULL
+6. EXIT
+3
+
+The element 6 is deleted
+Removed ELement: 6
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW QUEUE ELEMENTS
+3. REMOVE A ELEMENT
+4. ISEMPTY
+5. ISFULL
+6. EXIT
+3
+
+The queue is empty
+Removed ELement: -1
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW QUEUE ELEMENTS
+3. REMOVE A ELEMENT
+4. ISEMPTY
+5. ISFULL
+6. EXIT
+4
+true
+Enter the number of the below option to do list operation
+1. ADD A ELEMENT
+2. VIEW QUEUE ELEMENTS
+3. REMOVE A ELEMENT
+4. ISEMPTY
+5. ISFULL
+6. EXIT
