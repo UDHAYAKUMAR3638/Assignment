@@ -1,10 +1,12 @@
 import java.util.*;
+
 public class NaryTreeTraversal {
     class Node {
         int data;
         ArrayList<Node> children;
+
         Node(int data) {
-            this.data = data; 
+            this.data = data;   //initialize
             children = new ArrayList<>();
         }
     }
@@ -37,7 +39,7 @@ public class NaryTreeTraversal {
 
     void insertAt(int node,int val){
         if(root == null){
-            System.out.println("NODE IS NOT PRESENT IN THE TREE.");
+            System.out.println("THE ENTERED NODE IS NOT PRESENT IN THE TREE.");
             return;
         }
 
@@ -50,7 +52,7 @@ public class NaryTreeTraversal {
 
             if(temp.data == node){
                 if(temp.children.size() >= n){
-                    System.out.println("THERE IS NO SPACE TO ADD AN ELEMENT");
+                    System.out.println("CHILDRENS ARE FILLED");
                     return;
                 }
 
