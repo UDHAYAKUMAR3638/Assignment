@@ -1,4 +1,4 @@
-class Solution {
+class LongestRepeatingCharacterReplacement {
     public int characterReplacement(String s, int k) {
         int[] arr = new int[26];
         int largestCount = 0, start = 0, maxlen = 0;
