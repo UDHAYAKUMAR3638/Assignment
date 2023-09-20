@@ -10,7 +10,7 @@ class Binarytree{
         boolean flag=true;
         while(flag)
         {
-             System.out.println("\n1.Insert node");
+            System.out.println("\n1.Insert node");
             System.out.println("2.Preorder traversal");
             System.out.println("3.Inorder traversal");
             System.out.println("4.Postorder traversal");
@@ -50,10 +50,8 @@ class Binarytree{
                     t.search(root,val);
                     break;
                 case 7:
-                    flag=false;
-                    break;                    
-                default:
-                    System.out.println("invalid choice");
+                    flag=false;                   
+            
             }
         }
     }
