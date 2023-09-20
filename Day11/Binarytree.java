@@ -82,18 +82,6 @@ class Binarytree{
         return 1;
 
     }
-    void addnode(Tree root,Tree node)
-    {    
-        if(root==null)
-        return;
-        if(node.data>root.data)
-        {addnode(root.right,node);
-        root.right=node;}
-        else
-        {
-        addnode(root.left,node);
-        root.left=node;}
-    }
     ArrayList<Integer> preorderTrav(Tree root,ArrayList<Integer> arr)
     {
         if(root==null)
