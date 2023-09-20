@@ -3,9 +3,8 @@ public class NaryTreeTraversal {
     class Node {
         int data;
         ArrayList<Node> children;
-
         Node(int data) {
-            this.data = data;   //initialize
+            this.data = data; 
             children = new ArrayList<>();
         }
     }
@@ -38,7 +37,7 @@ public class NaryTreeTraversal {
 
     void insertAt(int node,int val){
         if(root == null){
-            System.out.println("THE ENTERED NODE IS NOT PRESENT IN THE TREE.");
+            System.out.println("NODE IS NOT PRESENT IN THE TREE.");
             return;
         }
 
