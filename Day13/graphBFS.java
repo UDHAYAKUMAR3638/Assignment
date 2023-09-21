@@ -30,6 +30,9 @@ class graphBFS{
         System.out.print("1.Enter Vertices or 2.End:");
         }
         map.put(root.data,root.list);
+         Integer[] Arr = null;
+        Arr = root.list.toArray(new Integer[root.list.size()]);
+        System.out.println(root.data+"->"+Arrays.toString(Arr));
         System.out.print("1.Create new node or 2.End:");
         if(sc.nextInt()==1)
         link();
@@ -44,7 +47,7 @@ class graphBFS{
                 if(!map1.containsKey(cur))
                 {
                   map1.put(cur,1);
-                  System.out.print(cur+" ");
+                  System.out.print("->"+cur+" ");
                   if(map.containsKey(cur))
                   q.addAll(map.get(cur));
                 }
