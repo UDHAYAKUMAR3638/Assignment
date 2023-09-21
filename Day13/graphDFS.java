@@ -39,11 +39,7 @@ class graphDFS{
         Stack<Integer>q=new Stack<>();
         q.add(val);
         while(!q.isEmpty())
-        {
-            
-            Integer cur=q.pop();
-            
-            
+        {       Integer cur=q.pop();
                 if(!map1.containsKey(cur))
                 {
                   map1.put(cur,1);
@@ -52,8 +48,7 @@ class graphDFS{
                   { for(Integer i:map.get(cur))
                   q.push(i);
                   }
-                }
-            
+                } 
         }
 
     }
