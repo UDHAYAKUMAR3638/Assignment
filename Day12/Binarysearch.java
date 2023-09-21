@@ -20,7 +20,6 @@ class Binarysearch{
     }
 
     static int binarysearch(int low,int high,int target)
-
     { 
         System.out.println("Low is At:"+low+" High is At:"+high);
         int mid=(high+low)/2;
