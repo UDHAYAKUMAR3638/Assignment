@@ -18,6 +18,7 @@ public static void main(String args[])
     for(int i:arr)
     System.out.print(i+" ");
     System.out.println();
+    
     arr=BubbleSort(arr);
     System.out.print("After Bubble Sort:");
     for(int i:arr)
@@ -29,7 +30,6 @@ static int [] BubbleSort(int arr[])
     {   flag=false;
         for(int j=0;j<arr.length-i-1;j++)
         {  
-            
             if(arr[j]>arr[j+1])
             {
                 int temp=arr[j];
