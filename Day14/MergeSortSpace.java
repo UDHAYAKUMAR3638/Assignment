@@ -1,5 +1,5 @@
 import java.util.*;
-class MergeSort{
+class MergeSortSpace{
 public static void main(String args[])
 {
     System.out.print("Enter the array size:");
@@ -32,36 +32,30 @@ static void sort(int arr[],int s,int e)
 }
 static void mergesort(int arr[],int s,int m,int e)
 {
-   int s1=m-s+1;
-   int s2=e-m;
-   int arr1[]=new int[s1];
-   int arr2[]=new int[s2];
-   for(int i=0;i<s1;i++)
-   arr1[i]=arr[s+i];
-   for(int i=0;i<s2;i++)
-   arr2[i]=arr[m+1+i];
-   int i=0;
-   int j=0;
-   int k=s;
-   while(i<s1&&j<s2)
-   {
-    if(arr1[i]<=arr2[j])
-    {
-     arr[k++]=arr1[i++];
+    Integer temp;
+    if(s==(e-1)){
+        if(arr[s]>arr[e]){
+            temp=arr[s];
+            arr[s]=arr[e];
+            arr[e]=temp;
+        }
     }
-    else 
+    int midstart=m+1;
+    while(s<midstart&&midstart<=e)
     {
-    arr[k++]=arr2[j++];
+        if(arr[s]>arr[midstart])
+        {
+            temp=arr[midstart];
+            for(int j=midstart;j>s;j--)
+            {
+                arr[j]=arr[j-1];
+            }
+            arr[s]=temp;
+            s++;
+            midstart++;
+        }
+        else
+        s++;
     }
-   }
-   while(i<s1)
-   {
-    arr[k++]=arr1[i++];
-   }
-   while(j<s2)
-   {
-    arr[k++]=arr2[j++];
-   }
-
 }
 }
