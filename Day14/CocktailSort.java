@@ -38,6 +38,7 @@ static int [] cocktailsort(int arr[])
                 arr[i+1]=temp;
                 flag=true;
             }
+            
         }
         if(!flag)
         break;
