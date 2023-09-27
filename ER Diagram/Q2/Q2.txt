@@ -2,5 +2,3 @@ create table player(player_id int not null primary key,dob date,name varchar(20)
 create table matches(match_id int not null primary key,m_date date,m_name varchar(20),place char(20));
 alter table matches add column time time;
 create table match_played(team_score int,player_score int);
-create table author(name char(20) primary key,address char(20),URL varchar(30));
-create table publisher(name char(20) primary key,address char(20),URL varchar(30),phoneno int(10));	
