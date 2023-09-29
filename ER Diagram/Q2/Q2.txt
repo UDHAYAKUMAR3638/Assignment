@@ -1,1 +1,34 @@
+create database student;
+use student;
+create table Student(
+	StudentId int primary key,
+    Name varchar(255),
+    Program varchar(50)
+);
 
+create table Exam(
+	ExamId int primary key,
+    ExamName varchar(50),
+    Time time,
+    place varchar(100)
+);
+
+create table CourseOffering(
+	OfferingId int primary key,
+    CourseNumber int,
+    Year int,
+    Semester varchar(20),
+    Room varchar(10),
+    Time time
+);
+-- 
+create Table ExamResult(
+	ResultId int primary key,
+    StudentId int unique,
+    OfferingId int unique,
+    ExamId int,
+    Marks int,
+    foreign key (StudentId) references Student(StudentId),
+    foreign key (OfferingId) references CourseOffering(OfferingId),
+    foreign key (ExamId) references Exam(ExamId)
+);
