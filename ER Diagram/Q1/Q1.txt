@@ -1,36 +1,45 @@
-create database student;
-use student;
-create table Student(
-	StudentId int primary key,
-    Name varchar(255),
-    Program varchar(50)
-);
+create database university;
+use  university;
+create table course(
+course_id int primary key,
+prerequisit varchar(100),
+credit int,title char(50),
+syllabus char(30));
 
-create table Exam(
-	ExamId int primary key,
-    ExamName varchar(50),
-    Time time,
-    place varchar(100)
-);
+create table instructor(
+instructor_id int primary key,
+name char(50),
+title char(100),
+dept char(20));
 
-create table CourseOffering(
-	OfferingId int primary key,
-    CourseNumber int,
-    Year int,
-    Semester varchar(20),
-    Room varchar(10),
-    Time time
-);
+create table student(
+student_id int primary key,
+name varchar(20),
+program char(20)); 
 
-create Table ExamResult(
-	ResultId int primary key,
-    StudentId int unique,
-    OfferingId int unique,
-    ExamId int,
-    Marks int,
-    foreign key (StudentId) references Student(StudentId),
-    foreign key (OfferingId) references CourseOffering(OfferingId),
-    foreign key (ExamId) references Exam(ExamId)
-);
+create table exam(
+exam_no int primary key,
+time time,exam_name varchar(20),
+place varchar(20),
+course_id int ,
+foreign key(course_id) references course(course_id));
 
-    
+create table marks(
+student_id int,
+grade int,
+exam_no int,
+foreign key(student_id) references student(student_id),
+foreign key(exam_no) references exam(exam_no));
+
+create table course_offerings(
+course_id int,
+instructor_id int,
+c_time time,
+room char(10),
+semester int,foreign key(course_id) references course(course_id),
+foreign key(instructor_id) references instructor(instructor_id));
+
+create table course_taken(
+student_id int,course_id int, 
+foreign key(student_id) references student(student_id),
+foreign key(course_id) references course(course_id));
