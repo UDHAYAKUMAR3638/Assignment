@@ -1,1 +1,9 @@
-
+create database exam;
+use exam;
+create table exam(
+exam_id int;
+time time,
+course_name varchar(50),
+room_number int,
+section_number int;
+);
