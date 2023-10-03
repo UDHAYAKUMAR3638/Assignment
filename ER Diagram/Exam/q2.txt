@@ -1,0 +1,30 @@
+create database exam;
+use exam;
+create table exam(
+time time
+);
+
+create table course(
+name char(50),
+department char(40),
+c_number int primary key
+);
+
+create table room(
+capacity int
+,building varchar(30)
+,r_number int primary key
+);
+
+create table section(
+s_number int primary key
+,enorollment int
+,c_number int
+,foreign key(c_number) references course(c_number)
+);
+
+alter table exam add (
+c_number int,r_number int,
+foreign key(c_number) references course(c_number),
+foreign key(r_number)references room(r_number)
+);
