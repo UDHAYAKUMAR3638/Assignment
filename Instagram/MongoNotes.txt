@@ -1,0 +1,62 @@
+**************************//Notes//*************************************
+//creating DB :
+ use studentDB->DB name
+
+//creating collection:
+db.createCollection table ->Collection name
+
+//insert multiple documents in collection:
+db.table.insertMany([{name:"udhaya",age:21,phno:"123234",dept:"ECE"},{name:"santhosh",age:24,phno:"123234",dept:"CE"},{name:"nathis",age:91,phno:"123234",dept:"CSE"},{name:"schain",age:18,phno:"123234",dept:"CT"},{name:"hari",age:25,phno:"123209900",dept:"BIO"}])
+
+//display whole collection using find method:
+db.table.find({})
+
+//update one document in collection:
+ db.table.updateOne({name:"schain"},{$set:{name:"sachin"}})
+
+//to limit no of of documents to be displayed:
+db.table.find({}).limit(3)
+
+//to add new key : value pair in all documents:
+
+
+db.table.updateMany(({}),{$set:{CompanyName:"Trustrace"}})
+
+//to display only specific attributes from each document:
+db.table.find({},{_id:0,marks:0}) ->key:1 to include ,key:0-> to exclude
+
+//to display documents in sorted order:
+db.table.find({}).sort({name:1})->ascending
+db.table.find({}).sort({name:-1})->descending
+db.table.find({},{name:1}).sort({name:1})
+
+//increase value of attribute in every document:
+db.table.updateMany({},{$inc:{age:5}}) ->add+5 to each document age attribute 
+
+db.table.updateMany({},{$inc:{age:-2}})-> sub -2 from each age in document
+
+//
+
+//to fetech from another collection document using aggregate:
+ db.ref.aggregate([{$lookup:{from:"table",localField:"_id",foreignField:"_id",as:"returned attribute name"}}])
+
+//to create index with index name:
+db.chat.createIndex({settings:-1},{name:"settingIndex"})
+
+
+//to find individual record total:
+$sum:"$likes"
+
+//$out:"collection name"
+create new collection with the returned result
+
+create,
+read,
+update,
+delete
+
+one, many
+
+skip, limit 
+
+************************************//end//**********************************

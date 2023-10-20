@@ -1,0 +1,345 @@
+use instagram
+db.createCollection("users")
+db.users.insertMany(
+    [
+        { 
+            email: "user1@gmail.com",
+            verified: "no",
+            phnumber: 9999876788,
+            dob: '05/05/2002',
+            pwd: 'user1' 
+        },
+        { 
+            email: "user2@gmail.com",
+            verified: "yes",
+            phnumber: 9989876788,
+            dob: '05/05/1992',
+            pwd: 'user2' 
+        }, 
+        { 
+            email: "user3@gmail.com",
+            verified: "no",
+            phnumber: 6369876788,
+            dob: '07/12/2002',
+            pwd: 'user3' 
+        }
+    ]
+)
+
+db.createCollection("pages")
+
+db.pages.insertMany ([
+        {
+            user_id: ObjectId("652cc18beec24af3b9bf5ea0"),
+            page_name: "user1",
+            page_handle: "user_1",
+            bio: "nothing to say",
+            dp: "",
+            avatar: "",
+            pwd: "user1",
+            dob: "05/05/2002",
+            page_privacy:"private"
+        },
+        {
+            user_id: ObjectId("652cc18beec24af3b9bf5ea1"),
+            page_name: "user2",
+            page_handle: "user_2",
+            bio: "nothing to say",
+            dp: "",
+            avatar: "",
+            pwd: "user2",
+            dob: "05/07/2002",
+            page_privacy:"public"
+        },
+        {
+            user_id: ObjectId("652cc18beec24af3b9bf5ea2"),
+            page_name: "user3",
+            page_handle: "user_3",
+            bio: "nothing to say",
+            dp: "",
+            avatar: "",
+            pwd: "user3",
+            dob: "05/07/1992",
+            page_privacy:"private"
+        }
+    ]
+)
+db.createCollection("followdetails")
+db.followdetails.insertMany([
+     {    followers:ObjectId("652cc355eec24af3b9bf5ea3") ,
+            following: ObjectId("652cc355eec24af3b9bf5ea4"),
+        },
+        {
+            followers:ObjectId("652cc355eec24af3b9bf5ea3") ,
+            following: ObjectId("652cc355eec24af3b9bf5ea5")
+        },
+        {
+            followers:ObjectId("652cc355eec24af3b9bf5ea5") ,
+            following: ObjectId("652cc355eec24af3b9bf5ea3")
+        }
+    ]
+)
+
+
+
+
+db.createCollection("device")
+
+db.device.insertMany([
+        {
+            page_id: ObjectId("652cc355eec24af3b9bf5ea3"),
+            device_location: "chennai",
+            login_time:"7:00 pm" ,
+            logout_time: "",
+            cookie: "cookie"
+        },
+        {
+            page_id: ObjectId("652cc355eec24af3b9bf5ea4"),
+            device_location: "chennai",
+            login_time:"7:00 pm" ,
+            logout_time: "",
+            cookie: "cookie"
+        },
+        {
+            page_id: ObjectId("652cc355eec24af3b9bf5ea5"),
+            device_location: "chennai",
+            login_time:"7:00 pm" ,
+            logout_time: "",
+            cookie: "cookie"
+        }
+    ]
+)
+
+db.createCollection("chat")
+
+db.chat.insertMany([
+        {
+            chat_type: "single",
+            vanish_mode: "false",
+            settings: ""
+        },
+        {
+            chat_type: "group",
+            vanish_mode: "false",
+            settings: ""
+        },
+        {
+            chat_type: "single",
+            vanish_mode: "true",
+            settings: ""
+        },
+    ]
+)
+
+db.createCollection("message")
+
+db.message.insertMany([
+        {
+            content:"hi " ,
+            sender: ObjectId("652cc355eec24af3b9bf5ea3"),
+            media_link: "",
+            time: "7:00 pm",
+            chat_id: ObjectId("652cc941cc0b72373bb7a37f"),
+            is_vanish_mode: "false",
+        },
+        {
+            content:"how are you" ,
+            sender: ObjectId("652cc355eec24af3b9bf5ea4"),
+            media_link: "",
+            time: "8:00 pm",
+            chat_id: ObjectId("652cc941cc0b72373bb7a380"),
+            is_vanish_mode: "true"
+        },
+        {
+            content:"not bad" ,
+            sender: ObjectId("652cc355eec24af3b9bf5ea5"),
+            media_link: "",
+            time: "9:00 pm",
+            chat_id: ObjectId("652cc941cc0b72373bb7a381"),
+            is_vanish_mode: "false"
+        }
+]
+)
+
+db.createCollection("chat_details")
+
+db.chat_details.insertMany([
+        {
+            chat_id:ObjectId("652bad684d3667e7866ef716") ,
+            page_id: ObjectId("652cc355eec24af3b9bf5ea3"),
+            is_admin:true ,
+            lastReadMessage_id:ObjectId("652ccae2cc0b72373bb7a385")
+         },
+         {
+            chat_id: ObjectId("652cc941cc0b72373bb7a37f"),
+            page_id: ObjectId("652cc355eec24af3b9bf5ea4"),
+            is_admin: true,
+            lastReadMessage_id: ObjectId("652ccae2cc0b72373bb7a386")
+         },
+         {
+            chat_id:ObjectId("652cc941cc0b72373bb7a381") ,
+            page_id: ObjectId("652cc355eec24af3b9bf5ea5"),
+            is_admin: false,
+            lastReadMessage_id:ObjectId("652ccae2cc0b72373bb7a387")
+         }
+    ]
+)
+
+db.createCollection("music")
+
+db.music.insertMany([
+        {
+            title: "single pasaga",
+            artist: "hip hop tamizah",
+            lyrics: "",
+            thumbnail: "url"
+        },
+        {
+            title: "aval",
+            artist: "pradeep kumar",
+            lyrics: "",
+            thumbnail: "url"
+        },
+        {
+            title: "poi valva",
+            artist: "pradeep kumar",
+            lyrics: "",
+            thumbnail: "url"
+        }
+    ]
+)
+
+db.createCollection("content")
+
+db.content.insertMany([
+        {
+            page_id : ObjectId("652cc355eec24af3b9bf5ea3") ,
+            post_media:"url" ,
+            media_type:"post" ,
+            music_id: ObjectId("652ccc54cc0b72373bb7a38b") ,
+            views: 7000,
+            primary_poster: ObjectId("652ba77b9349228d876df87c"),
+            likes: 600,
+            caption: "",
+            date_and_time:new ISODate("2020-05-18T14:10:30Z") ,
+            location: "chennai",
+            music_id_timestamp:"5s"
+        },
+        {
+            page_id : ObjectId("652cc355eec24af3b9bf5ea4") ,
+            post_media:"url" ,
+            media_type:"post" ,
+            music_id: ObjectId("652ccc54cc0b72373bb7a38c") ,
+            views: 706000,
+            primary_poster: ObjectId("652cc355eec24af3b9bf5ea4"),
+            likes: 67700,
+            caption: "",
+            date_and_time:new ISODate("2022-05-18T14:10:30Z") ,
+            location: "coimbatore",
+            music_id_timestamp:"60s"
+        },
+        {
+            page_id : ObjectId("652cc355eec24af3b9bf5ea5") ,
+            post_media:"url" ,
+            media_type:"story" ,
+            music_id: ObjectId("652ccc54cc0b72373bb7a38d") ,
+            views: 1000,
+            primary_poster: ObjectId("652cc355eec24af3b9bf5ea5"),
+            likes: 500,
+            caption: "",
+            date_and_time:new ISODate("2023-05-28T14:10:30Z") ,
+            location: "karur",
+            music_id_timestamp:"70s"
+        }
+    ]
+)
+
+
+//to find no of post by a user display their post count
+db.content.aggregate(
+    {$group:{
+            _id:{page_id:"$page_id",
+            media_type:"$media_type"},
+            count:{$sum:1}}})
+
+
+db.content.aggregate(
+    {$group:{
+        _id:{page_id:"$page_id",
+        media_type:"$media_type"},
+        count:{$sum:1}}})
+
+
+
+db.content.updateMany({},
+{$set:
+{comment:
+[
+    {sender:"652cc355eec24af3b9bf5ea5",
+    text:"great"},
+    {sender:"652cc355eec24af3b9bf5ea5",
+    text:"good"}
+]
+}})
+
+
+//to find popularity of user based on likes,views,comments:
+db.content.aggregate(
+    [{$group:{
+    _id:"$page_id",
+    post_likes:{
+        $sum:"$likes"
+        },
+        post_views:{
+            $sum:"$views"
+            },
+            post_comments:{
+                $sum:{$size:"$comment"}}}},
+                {$project:{
+                    user_id:"$_id.user_id",
+                    post_likes:1,
+                    post_comments:1,
+                    post_views:1,
+                    total_score:{
+                        $sum:["$post_likes",
+                        "$post_comments",
+                        "$post_views"
+                        ]}}}])
+
+
+//user with highest popularity:
+db.content.aggregate(
+    [{$group:{
+        _id:"$page_id",
+            post_likes:{$sum:"$likes"},
+            post_views:{$sum:"$views"},
+            post_comments:{$sum:{$size:"$comment"}}}},
+            {$project:{user_id:"$_id.user_id",
+            post_likes:1,post_comments:1,
+            post_views:1,total_score:{
+                $sum:["$post_likes",
+                "$post_comments",
+                "$post_views"]}}},
+                {$sort:{total_score:-1}}])
+
+
+
+//to create DB with acquired result:
+db.content.aggregate(
+    [{$group:{
+        _id:"$page_id",
+            post_likes:{$sum:"$likes"},
+            post_views:{$sum:"$views"},
+            post_comments:{$sum:{$size:"$comment"}}}},
+            {$project:{user_id:"$_id.user_id",
+            post_likes:1,post_comments:1,
+            post_views:1,total_score:{
+                $sum:["$post_likes",
+                "$post_comments",
+                "$post_views"]}}},
+                {$sort:{total_score:-1}},
+                {$out:"Top popularity board"}])
+
+
+
+
