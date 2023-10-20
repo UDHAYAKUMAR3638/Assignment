@@ -283,28 +283,39 @@ db.content.updateMany({},
 }})
 
 
+
 //to find popularity of user based on likes,views,comments:
 db.content.aggregate(
     [{$group:{
+
     _id:"$page_id",
     post_likes:{
         $sum:"$likes"
+
         },
-        post_views:{
-            $sum:"$views"
+    post_views:{
+
+        $sum:"$views"
+
             },
-            post_comments:{
-                $sum:{$size:"$comment"}}}},
-                {$project:{
-                    user_id:"$_id.user_id",
-                    post_likes:1,
-                    post_comments:1,
-                    post_views:1,
-                    total_score:{
-                        $sum:["$post_likes",
-                        "$post_comments",
-                        "$post_views"
-                        ]}}}])
+    post_comments:{
+
+        $sum:{$size:"$comment"}}
+
+        }},
+    {$project:{
+
+            user_id:"$_id.user_id",
+            post_likes:1,
+            post_comments:1,
+            post_views:1,
+            total_score:{
+            $sum:["$post_likes",
+            "$post_comments",
+            "$post_views"
+
+            ]}}}])
+
 
 
 //user with highest popularity:
@@ -323,7 +334,8 @@ db.content.aggregate(
                 {$sort:{total_score:-1}}])
 
 
-
+ 
+ 
 //to create DB with acquired result:
 db.content.aggregate(
     [{$group:{
@@ -339,7 +351,3 @@ db.content.aggregate(
                 "$post_views"]}}},
                 {$sort:{total_score:-1}},
                 {$out:"Top popularity board"}])
-
-
-
-
